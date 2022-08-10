@@ -46,7 +46,15 @@ module.exports = {
                 use:[
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'less-loader'
+                    {
+                        loader:'less-loader',
+                        options:{
+                            lessOptions: {
+                                modifyVars: { '@primary-color': '#1DA57A' },//修改antd的主题色
+                                javascriptEnabled: true
+                              }
+                        }
+                    }
                 ]
             },
             {

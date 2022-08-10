@@ -14,4 +14,7 @@ module.exports = {
             "presets":["@babel/preset-react"]
         }
     },
+    rules:{
+        'no-var':'error'
+    }
 }
